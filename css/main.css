@@ -119,3 +119,33 @@
     
 }
 
+/* Classes utilitárias */
+
+.jl-text-green{
+    color: #2ccb69;
+}
+.jl-text-dark{
+    color: #4D4D4C;
+}
+.jl-text-light{
+    color: #bcbcbc;
+}
+.jl-text-black{
+    color: #000;
+}
+
+.jl-bg-green{
+    background-color: #2ccb69;
+}
+.jl-bg-dark{
+    background-color: #4D4D4C;
+}
+.jl-bg-light{
+    background-color: #bcbcbc;
+}
+.jl-bg-black{
+    background-color: #000;
+}
+
+
+
