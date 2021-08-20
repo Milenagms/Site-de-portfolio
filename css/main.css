@@ -1,4 +1,4 @@
-*{ 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,51 +6,52 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-p{
+p {
     font-family: 'Open Sans', sans-serif;
 }
 
-@media screen and (min-width: 320px){
-    .jl-page-wrapper{
+@media screen and (min-width: 320px) {
+    .jl-page-wrapper {
         width: 100%;
         height: 100vh;
         display: block;
         background-color: #1c1c1c;
         border: 30px solid #000;
     }
-    .jl-topbar{
+    .jl-topbar {
         width: 100%;
         height: 110px;
         display: block;
         background-color: transparent;
-        position: fixed;/*tem o mesmo comportamento absolut*/
+        position: fixed;
+        /*tem o mesmo comportamento absolut*/
         top: 0;
         left: 0;
     }
-    .jl-logo{
+    .jl-logo {
         width: 74px;
         height: 110px;
         float: left;
         margin-left: 60px;
         background-color: #2ccb69;
-        border-radius:  0 0 37px 0; 
+        border-radius: 0 0 37px 0;
     }
-
-    .jl-logo img{ /* ao invés de colocar na classe  jl-logo um text-align: center; então mexe diretamente com a imagem*/
-        width:46px;
+    .jl-logo img {
+        /* ao invés de colocar na classe  jl-logo um text-align: center; então mexe diretamente com a imagem*/
+        width: 46px;
         height: 31px;
         display: block;
         margin: 55px auto 0 auto;
     }
-    .jl-menu{
+    .jl-menu {
         display: none;
     }
-    .jl-btn-contact{
+    .jl-btn-contact {
         width: 45px;
         height: 45px;
         display: block;
         background-color: #2ccb69;
-        background-image: url(../images/icon-contact-close.svg) ;
+        background-image: url(../images/icon-contact-close.svg);
         background-repeat: no-repeat;
         position: fixed;
         bottom: 45px;
@@ -59,18 +60,10 @@ p{
         z-index: 200;
         transition: all 0.2s ease-out;
     }
-
-    .jl-social-links{
-        width: 100%;
-        height: 45px;
-        display: block;
+    .jl-btn-contact:hover {
+        background-position-y: -45px;
     }
-
-    .jl-btn-contact:hover{
-        background-position-y: -45px ;
-    }
-
-    .jl-contact-info{
+    .jl-contact-info {
         width: 245px;
         height: 165px;
         padding: 25px;
@@ -79,23 +72,64 @@ p{
         right: 65px;
         z-index: 200;
     }
-
-
-}
-@media screen and (min-width: 576px){
-    
-}
-@media screen and (min-width: 768px){
-    
-}
-@media screen and (min-width: 992px){
-    .jl-menu{
+    .jl-contact-info-inner {
+        display: table;
+        width: 100%;
+        float: right;
+    }
+    .jl-contact-info-inner p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .jl-social {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+    }
+    .jl-social>img {
+        width: 20px;
+        height: auto;
         display: block;
+        margin: 13px auto 0;
+    }
+    .jl-corner {
+        width: 25px;
+        height: 25px;
+        display: block;
+        float: right;
+        display: relative;
+    }
+    .jl-social-links {
+        width: 100%;
+        height: 45px;
+        display: block;
+        position: relative;
+        left: -12px;
+        margin-top: 7px;
+    }
+    .jl-corner:after {
+        content: '';
+        width: 25px;
+        height: 25px;
+        display: block;
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+        background: transparent url('../images/corner.svg') no-repeat;
+    }
+}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {
+    .jl-menu {
+        display: table;
         float: left;
         height: 110px;
         margin-left: 30px;
     }
-
     .jl-menu a {
         font-family: 'Open Sans';
         font-size: 16px;
@@ -108,73 +142,72 @@ p{
         font-weight: 400;
         position: relative;
     }
-    .jl-menu a:first-child{
+    .jl-menu a:first-child {
         margin-left: 0;
     }
-    .jl-menu  a:hover {
-        color: #2ccb69; 
+    .jl-menu a:hover {
+        color: #2ccb69;
     }
-    .jl-menu a:before{
+    .jl-menu a:before {
         content: '';
         width: 100%;
-        height:  4px;
+        height: 4px;
         background-color: #2ccb69;
         display: block;
         position: absolute;
         bottom: -6px;
         left: 0;
-        transition: all 0.2s ease-out;  
+        transition: all 0.2s ease-out;
         transform: scale(0, 1);
         transform-origin: center left;
-        }
-    .jl-menu a:hover:before{
+    }
+    .jl-menu a:hover:before {
         transform: scale(1, 1);
     }
+}
 
-    
-}
-@media screen and (min-width: 1200px){
-    
-}
-@media screen and (min-width: 1364px){
-    
-}
-@media screen and (min-width: 1600px){
-    
-}
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1364px) {}
+
+@media screen and (min-width: 1600px) {}
+
 
 /* Classes utilitárias */
 
-.jl-title{
+.jl-title {
     font-family: 'Abril Fatface', serif;
     font-weight: normal;
 }
 
-.jl-text-green{
+.jl-text-green {
     color: #2ccb69;
 }
-.jl-text-dark{
+
+.jl-text-dark {
     color: #4D4D4C;
 }
-.jl-text-light{
+
+.jl-text-light {
     color: #bcbcbc;
 }
-.jl-text-black{
+
+.jl-text-black {
     color: #000;
 }
 
-.jl-bg-green{
+.jl-bg-green {
     background-color: #2ccb69;
 }
-.jl-bg-dark{
+
+.jl-bg-dark {
     background-color: #4D4D4C;
 }
-.jl-bg-light{
+
+.jl-bg-light {
     background-color: #bcbcbc;
 }
-.jl-bg-black{
+
+.jl-bg-black {
     background-color: #000;
 }
-
-
-
