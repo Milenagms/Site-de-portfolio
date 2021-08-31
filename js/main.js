@@ -1,4 +1,5 @@
 var btnContact = document.querySelector('.jl-btn-contact');
+var toggleModal = document.querySelectorAll('jl-toggle-modal')
 
 window.addEventListener('load', function() {
     var pagePreloader = document.querySelector('.jl-preloader');

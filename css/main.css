@@ -84,7 +84,7 @@ label {
     .jl-overlay {
         width: 100%;
         height: 100vh;
-        display: block;
+        display: none;
         position: fixed;
         z-index: 1000;
         top: 0;
@@ -93,7 +93,7 @@ label {
     }
     .jl-modal {
         width: 800px;
-        display: table;
+        display: none;
         padding: 30px;
         border-radius: 0 30px 30px 30px;
         position: fixed;
@@ -128,15 +128,18 @@ label {
         font-size: 16px;
         display: inline-block;
     }
-    .jl-field {
+    .jl-field,
+    .jl-textarea {
         width: 100%;
-        height: 45px;
         background-color: #2f2f2f;
         border-radius: 4px;
         color: #fff;
         border: none;
         font-size: 16px;
         text-indent: 15px;
+    }
+    .jl-field {
+        height: 45px;
     }
     .jl-topbar {
         width: 100%;
@@ -361,6 +364,11 @@ label {
     text-transform: lowercase;
 }
 
+.jl-btn-block {
+    display: block;
+    width: 100%;
+}
+
 .jl-btn-medium {
     height: 38px;
     padding: 0 27px;
@@ -451,7 +459,7 @@ label {
     margin-right: 15px;
 }
 
-.jl-mar-bottom-15px {
+.jl-mar-bottom-15 {
     margin-bottom: 15px;
 }
 
@@ -471,7 +479,7 @@ label {
     padding-right: 15px;
 }
 
-.jl-pad-bottom-15px {
+.jl-pad-bottom-15 {
     padding-bottom: 15px;
 }
 
